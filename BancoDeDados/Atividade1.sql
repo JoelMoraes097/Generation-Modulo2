@@ -22,6 +22,10 @@ UPDATE tb_funcoes
 SET funcao = "Programadora senior"
 WHERE id_funcio = 1;
 
+UPDATE tb_funcoes
+SET salario = 10300
+WHERE id_funcio = 1;
+
 SELECT * FROM tb_funcoes WHERE salario > 2000;
 SELECT * FROM tb_funcoes WHERE salario < 2000;
 
