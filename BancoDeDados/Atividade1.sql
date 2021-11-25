@@ -1,7 +1,7 @@
 CREATE DATABASE db_atividade1 ;
 USE db_atividade1;
 
-CREATE TABLE tb_funcoes (
+CREATE TABLE tb_funcionarios (
 	id_funcio INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255),
     funcao VARCHAR(255),
@@ -10,7 +10,7 @@ CREATE TABLE tb_funcoes (
     PRIMARY KEY (id_funcio)
 );
 
-INSERT INTO tb_funcoes (nome, funcao, salario, email)
+INSERT INTO tb_funcionarios (nome, funcao, salario, email)
 VALUES
 ("Joselita", "Programadora jr", 4500, "joseliao@email.com"),
 ("Moliver",	"Programador senior", 10300, "moliver@email.com"),
@@ -18,14 +18,14 @@ VALUES
 ("Mertison Olivera", "Gerente ADM", 8500, "mertizinho@email.com"),
 ("Rose Dlima", "Gerente Executiva",	20100, "rosedlima@email.com");
 
-UPDATE tb_funcoes
+UPDATE tb_funcionarios
 SET funcao = "Programadora senior"
 WHERE id_funcio = 1;
 
-UPDATE tb_funcoes
+UPDATE tb_funcionarios
 SET salario = 10300
 WHERE id_funcio = 1;
 
-SELECT * FROM tb_funcoes WHERE salario > 2000;
-SELECT * FROM tb_funcoes WHERE salario < 2000;
+SELECT * FROM tb_funcionarios WHERE salario > 2000;
+SELECT * FROM tb_funcionarios WHERE salario < 2000;
 
