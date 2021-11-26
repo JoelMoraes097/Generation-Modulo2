@@ -51,15 +51,14 @@ SELECT * FROM tb_personagem ;
 SELECT * FROM tb_personagem WHERE Ataque > 2000;
 
 -- Faça um select trazendo os personagens com poder de defesa entre 1000 e 2000.
-SELECT * FROM tb_personagem WHERE Defesa = 1000 and  2000 ;
+SELECT * FROM tb_personagem WHERE Defesa between 1000 AND 2000;
 
 -- Faça um select utilizando LIKE buscando os personagens com a letra C.
 SELECT Nome  FROM tb_personagem WHERE tb_personagem.Nome LIKE "%C%";
 
 -- Faça um um select com Inner join entre tabela classe e personagem.
 SELECT * FROM tb_personagem 
- INNER JOIN tb_classe on tb_classe.id_classes = tb_personagem.cl_personagem
-WHERE tb_personagem.Nome;
+ INNER JOIN tb_classe on tb_classe.id_classes = tb_personagem.cl_personagem;
 
 -- Faça um select onde traga todos os personagem de uma classe específica (exemplo todos os personagens que são arqueiros).
 SELECT * FROM tb_personagem 
